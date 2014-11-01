@@ -1,6 +1,8 @@
 git_utils
 Tools for git dairy use.
-## git-clean-checkout
-Abort checkout if the index or working directory is dirty. The logic of git-checkout conflict detect is terrible.
+## git-checkout
+Abort checkout if the index or working directory is dirty. This is to prevent bring unexpected change into the new branch.
+## git-uitls
+bash complection file
+## Makefile
 TBD
-* bash completion support is needed.
