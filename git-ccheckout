@@ -12,24 +12,21 @@ patterns = []
 patterns.append(re.compile(" M .*"))
 patterns.append(re.compile("A .*"))
 
+# Gather dirty log lines
 modifieds = []
 for line in lines:
   for pattern in patterns:
     if re.match(pattern, line):
       modifieds.append(line)
 
+# Abort once the index of working directory is dirty.
 if len(modifieds):
-  print "Error: checkout abort if the working directory or the index is dirty."
+  print "Aboring: checkout aborting if the working directory or the index is dirty."
   for line in modifieds:
     print line
 
   sys.exit(1)
 else:
-  # Concat argument(XXX: is there a easy way?)
-  command = ''
-  for i, line in enumerate(sys.argv):
-    if i:
-      command = command + " " + line
-
-  os.system("git checkout " + command)
+  params = ("" if len(sys.argv) == 0 else " ".join(sys.argv[1:]))
+  os.system("git checkout " + params)
 
