@@ -12,7 +12,7 @@ $ sudo make uninstall
 
 Usage
 ```
-$ git ccheckout ${__git-heads}
+$ git ccheckout <TAB> # :)
 ```
 ## Document
 TBD
