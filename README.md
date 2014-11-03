@@ -2,8 +2,13 @@
 
 Install
 ```
-$ make install
+$ sudo make install
 ```
+Uninstall
+```
+$ sudo make uninstall
+```
+
 
 Usage
 ```
