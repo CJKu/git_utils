@@ -1,5 +1,15 @@
 git_utils
-Tools for git dairy use.
+
+Install
+```
+$ make install
+```
+
+Usage
+```
+$ git ccheckout ${__git-heads}
+```
+
 ## git-ccheckout
 ccheckout stands for clear checkout. Abort checkout if the index or working directory is dirty. This is to prevent bring unexpected change into the new branch.
 
