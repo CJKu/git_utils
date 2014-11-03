@@ -13,3 +13,4 @@ uninstall:
 	rm -f $(PREFIX)/bin/git-ccheckout
 	rm -f $(COMPREFIX)/git-utils
 
+.PHONY: install uninstall
